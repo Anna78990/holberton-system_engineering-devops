@@ -1,2 +1,0 @@
-Ich habe 
-Hunger.
