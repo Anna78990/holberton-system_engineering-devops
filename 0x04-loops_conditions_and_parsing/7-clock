@@ -2,7 +2,7 @@
 # This script is displaying "Best School" 10 times
 i=0
 h=0
-while ((i < 720))
+while ((i <= 720))
 do
     if ((i % 60 == 0)) || ((i == 0))
     then
