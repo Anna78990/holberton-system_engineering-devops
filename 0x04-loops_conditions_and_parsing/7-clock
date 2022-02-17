@@ -2,14 +2,20 @@
 # This script is displaying "Best School" 10 times
 i=0
 h=0
-while ((i <= 720))
+while ((h <= 12))
 do
-    if ((i % 60 == 0)) || ((i == 0))
+    if ((i == 0))
     then
       echo Hour: "$h"
       h=$(( h + 1 ))
+      i=$(( i + 1 ))
+    elif ((i % 60 == 0))
+      then
+      echo Hour: "$h"
+      h=$(( h + 1 ))
+      i=1
     else
       echo "$i"
+      i=$(( i + 1 ))
     fi
-i=$(( i + 1 ))
 done
