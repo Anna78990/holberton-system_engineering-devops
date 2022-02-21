@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # It display access log
 
-awk -F " " '{print $1}' apache-access.log | cut -d " " -f 1
+awk -F " " '{print $1, $9}' apache-access.log
