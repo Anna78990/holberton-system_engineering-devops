@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# It display access log
+
+cat apache-access.log | awk -F \" '{print $1}' | cut -d " " -f 1
