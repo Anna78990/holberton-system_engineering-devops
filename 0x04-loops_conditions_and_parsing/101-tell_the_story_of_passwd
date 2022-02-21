@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# It displays the content of the file /etc/passwd
 
 FILENAME="/etc/passwd"
 OLDIFS=$IFS
