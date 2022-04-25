@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Install haproxy on
+apt-get -y update
+apt install haproxy -y
+echo -e "\nfrontend local_server\n\tbind :80\n\tmode http\n\tdefault_backend nodes\n\nbackend nodes\n\tmode http\n\tbalance roundrobin\n\tserver 3230-web-01 34.148.155.116:80\n\tserver 3230-web-02 34.74.13.47:80" >>  /etc/haproxy/haproxy.cfg
+service haproxy restart
