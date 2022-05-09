@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 #Insall uwf and configure to open ports for 22, 443, 80
-apt -y update
-apt -y install ufw
+
+apt-get -y update
+apt-get -y install ufw
 ufw default deny incoming
-ufw allow 22
-ufw allow 443
-ufw allow 80
+ufw allow 22/tcp
+ufw allow 443/tcp
+ufw allow 80/tcp
 ufw enable
