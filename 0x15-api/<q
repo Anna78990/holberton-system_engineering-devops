@@ -24,4 +24,4 @@ for i in tj:
             cmt_list.append(i['title'])
 print('Employee {} is done with tasks({}/{}):'.format(person, done, all))
 for i in cmt_list:
-    print('\t {}'.format(i))
+    print('\t{}'.format(i))
