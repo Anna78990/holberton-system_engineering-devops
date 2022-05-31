@@ -9,6 +9,6 @@ def number_of_subscribers(subreddit):
 
     res = requests.get(url, headers={'User-agent': 'your bot 0.1'})
     if res.status_code > 300:
-        return res.status_code
+        return 0
 
     return res.json().get("data").get("subscribers")
