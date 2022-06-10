@@ -1,6 +1,13 @@
 # change the ulimit default value to fix the requests failed
 
-exec { 'fix-nginx':
-  command => "sed -i 's/15/4096/g' etc/default/nginx; sudo service nginx restart",
-  path    => ['/bin', '/usr/bin', '/usr/sbin']
+
+exec { 'delete ulimit':
+    path    => '/usr/local/bin/:/bin/',
+    command => 'sed -i "5d" /etc/default/nginx'
 }
+
+exec { 'restart ngnix':
+    path    => '/usr/local/bin/:/bin/:/usr/bin/',
+    command => 'sudo service nginx restart'
+}
+
