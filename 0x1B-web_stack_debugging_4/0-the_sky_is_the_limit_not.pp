@@ -2,7 +2,7 @@
 
 exec { 'delete ulimit':
     path    => '/usr/local/bin/:/bin/',
-    command => 'sed -i "s/15/4096/" /etc/default/nginx'
+    command => 'sed -i "5d" /etc/default/nginx'
 }
 
 exec { 'restart ngnix':
