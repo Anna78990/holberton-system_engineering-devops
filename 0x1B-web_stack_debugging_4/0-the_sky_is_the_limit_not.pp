@@ -2,7 +2,7 @@
 
 exec {'Change Ulimit':
 path    =>  [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ],
-command => 'sed -i "s/ULIMIT=.*/ULIMIT=\"-n 2048\"/" /etc/default/nginx',
+command => 'sed -i "s/ULIMIT=.*/ULIMIT=\"-n 4096\"/" /etc/default/nginx',
 }
 
 exec {'Restart nginx':
