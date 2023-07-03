@@ -5,7 +5,6 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-#define PORT 12345
 
 /**
  * main - opens an IPv4/TCP socket, and listens to traffic on port 12345
@@ -27,7 +26,7 @@ int main(void)
 	memset(&server_addr, 0, sizeof(server_addr));
 	server_addr.sin_family = AF_INET;
 	server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-	server_addr.sin_port = htons(PORT);
+	server_addr.sin_port = htons(12345);
 
 	if (bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0)
 	{
@@ -41,7 +40,7 @@ int main(void)
 		exit(EXIT_FAILURE);
 	}
 
-	printf("Server listening on port %d\n", PORT);
+	printf("Server listening on port 12345\n");
 
 	while (1)
 	{
